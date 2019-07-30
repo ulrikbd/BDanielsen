@@ -20,6 +20,7 @@ from users import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
 from pizza import views as pizza_views
+from vinmonopolet import views as vinmonopolet_views
 
 
 
@@ -43,6 +44,7 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
     path('pizza/', pizza_views.pizza, name='pizza'),
+    path('vinmonopolet/', vinmonopolet_views.vinmonopolet, name='vinmonopolet'),
     path('', include('blog.urls')),
 ]
 

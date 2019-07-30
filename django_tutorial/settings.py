@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'blog.apps.BlogConfig',
     'pizza.apps.PizzaConfig',
+    'vinmonopolet.apps.VinmonopoletConfig',
     'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
