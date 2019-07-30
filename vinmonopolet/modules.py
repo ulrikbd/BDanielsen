@@ -3,7 +3,7 @@
 Created on Tue Mar 26 18:49:51 2019
 @author: ulrik
 """
-
+from background_task import background
 import pandas as pd
 import numpy as np
 
@@ -39,7 +39,7 @@ def get_max_index(array, number):
 def sort(df, kind):
     return df[df.Varetype == kind]
 
-
+@background()
 def cheapest(kind, number):
     df = pd.read_csv(url, delimiter=';', encoding='unicode_escape',
                      index_col='Varenummer')
