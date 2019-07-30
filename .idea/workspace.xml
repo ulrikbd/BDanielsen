@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80d941c4-6ef1-4045-b0bf-2c4eb730866b" name="Default Changelist" comment="" />
+    <list default="true" id="80d941c4-6ef1-4045-b0bf-2c4eb730866b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vinmonopolet/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -88,17 +90,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_tutorial/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1672">
-              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="264">
+              <caret line="146" column="35" lean-forward="true" selection-start-line="146" selection-start-column="35" selection-end-line="146" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="285">
+              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -106,10 +108,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vinmonopolet/modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="283">
+              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding>
-                <element signature="e#84#103#0" expanded="true" />
+                <element signature="e#83#121#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,12 +149,13 @@
         <option value="$PROJECT_DIR$/blog/static/blog/main.css" />
         <option value="$PROJECT_DIR$/django_tutorial/urls.py" />
         <option value="$PROJECT_DIR$/vinmonopolet/views.py" />
-        <option value="$PROJECT_DIR$/vinmonopolet/modules.py" />
         <option value="$PROJECT_DIR$/vinmonopolet/forms.py" />
         <option value="$PROJECT_DIR$/vinmonopolet/models.py" />
         <option value="$PROJECT_DIR$/blog/templates/blog/base.html" />
         <option value="$PROJECT_DIR$/vinmonopolet/templates/vinmonopolet/calculator.html" />
+        <option value="$PROJECT_DIR$/vinmonopolet/modules.py" />
         <option value="$PROJECT_DIR$/django_tutorial/settings.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -201,19 +204,6 @@
             <path>
               <item name="bdanielsen" type="b2602c69:ProjectViewProjectNode" />
               <item name="bdanielsen" type="462c0819:PsiDirectoryNode" />
-              <item name="vinmonopolet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bdanielsen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdanielsen" type="462c0819:PsiDirectoryNode" />
-              <item name="vinmonopolet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bdanielsen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdanielsen" type="462c0819:PsiDirectoryNode" />
-              <item name="vinmonopolet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="vinmonopolet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -314,12 +304,12 @@
       <workItem from="1564048775978" duration="6095000" />
       <workItem from="1564065061665" duration="11546000" />
       <workItem from="1564474589508" duration="552000" />
-      <workItem from="1564479699857" duration="11209000" />
+      <workItem from="1564479699857" duration="11478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29402000" />
+    <option name="totallyTimeSpent" value="29671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -567,30 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vinmonopolet/modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#84#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_tutorial/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1672">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vinmonopolet/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -605,6 +571,30 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vinmonopolet/modules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="e#83#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_tutorial/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="146" column="35" lean-forward="true" selection-start-line="146" selection-start-column="35" selection-end-line="146" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
