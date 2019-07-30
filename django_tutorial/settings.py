@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'background_task',
 ]
 
 MIDDLEWARE = [
@@ -140,9 +139,6 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-BACKGROUND_TASK_RUN_ASYNC = True
-
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
