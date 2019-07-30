@@ -5,14 +5,16 @@
     <div class="content-section">
     {% crispy form %}
     {% if flour %}
-    <legend class="border-top mb-4">Ingredients:</legend>
-    <div class="container border-rounded-sm pt-4">
+    <div class='container'>
+    <div class=" row border-top mb-4">
+        <legend class="border-rounded-sm pt-4">Ingredients:
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item col-md-3 lead">{{ flour }} g flour</li>
             <li class="list-group-item col-md-3 lead">{{ water }} g water</li>
             <li class="list-group-item col-md-3 lead">{{ salt }} g salt</li>
             <li class="list-group-item col-md-3 lead">{{ yeast }} g yeast</li>
         </ul>
+    </div>
     </div>
     {% endif %}
     </div>
