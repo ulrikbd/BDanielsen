@@ -11,7 +11,7 @@ url = 'https://www.vinmonopolet.no/medias/sys_master/products/products/hbc/hb0/8
 
 
 def get_data():
-    df = pd.read_csv(url, delimiter=';', encoding='unicode_escape',
+    df = pd.read_csv('produkter.csv', delimiter=';', encoding='unicode_escape',
                      index_col='Varenummer')
     return df
 
@@ -62,6 +62,6 @@ def cheapest(kind, number):
     return chp_dict
 
 
-d = cheapest('Rosévin', 10)
-for key, value in d.items():
-    print(key, value)
+# d = cheapest('Rosévin', 10)
+# for key, value in d.items():
+#     print(key, value)
