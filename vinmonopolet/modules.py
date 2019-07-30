@@ -5,8 +5,9 @@ Created on Tue Mar 26 18:49:51 2019
 """
 import pandas as pd
 import numpy as np
+# import time
 
-
+# start_time = time.time()
 url = 'https://www.vinmonopolet.no/medias/sys_master/products/products/hbc/hb0/8834253127710/produkter.csv'
 
 
@@ -65,3 +66,4 @@ def cheapest(kind, number):
 # d = cheapest('Rosévin', 10)
 # for key, value in d.items():
 #     print(key, value)
+# print(time.time() - start_time)
