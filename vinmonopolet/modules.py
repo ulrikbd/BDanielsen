@@ -11,7 +11,7 @@ url = 'https://www.vinmonopolet.no/medias/sys_master/products/products/hbc/hb0/8
 
 
 def get_data():
-    df = pd.read_csv('produkter.csv', delimiter=';', encoding='unicode_escape',
+    df = pd.read_csv(url, delimiter=';', encoding='unicode_escape',
                      index_col='Varenummer')
     return df
 
