@@ -21,7 +21,7 @@ class Vinmonopolet(models.Model):
         ('Vermut', 'Vermut')
     ]
 
-    alcohol_type = models.CharField('Type of alcohol',max_length=15, choices=CHOICES, default='Rødvin'
+    alcohol_type = models.CharField('Type of alcohol',max_length=30, choices=CHOICES, default='Rødvin'
                                  )
     number = models.IntegerField('How many results?', default=10)
 

@@ -25,8 +25,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
-# DEBUG = False
+# DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = False
 
 
 ALLOWED_HOSTS = [
@@ -75,6 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -92,10 +93,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-context_processors = [
-    'django.template.context_processors.media' # set this explicitly
-]
 
 
 # Password validation
@@ -139,6 +136,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+DJANGO_SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
