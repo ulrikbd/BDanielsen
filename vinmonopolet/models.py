@@ -9,7 +9,7 @@ class Vinmonopolet(models.Model):
         ('Musserende vin', 'Musserende vin'),
         ('Portvin', 'Portvin'),
         ('Champagne, brut', 'Champagne, brut'),
-        ('Champagne, extra brut', 'Champagne, extra brut'),
+        ('Champagne extra brut', 'Champagne extra brut'),
         ('Champagne, rosé', 'Champagne, rosé'),
         ('Vodka', 'Vodka'),
         ('Gin', 'Gin'),

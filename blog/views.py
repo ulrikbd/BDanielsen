@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .forms import AboutForm
 from django.views.generic import (
     ListView,
@@ -16,6 +18,10 @@ def home(request):
     context =  {
         'posts': Post.objects.all()
     }
+    # if request.GET:
+    #     query = request.GET['q']
+    #     context['queary'] = str(query)
+
     return render(request, 'blog/home.html', context)
 
 
@@ -102,3 +108,27 @@ def about(request):
 
 def about_success(request):
     return render(request, 'blog/success.html', {'title': 'Success?', 'like_pizza': 'no'})
+
+
+def search(request):
+    query_string = ''
+    found_entries = None
+    if ('q' in request.GET) and request.GET['q'].strip():
+        query_string = request.GET['q']
+        found_entries = Post.objects.filter(title__icontains=query_string).order_by('date_posted')
+        if found_entries:
+            return render(request, 'blog/home.html', {'query_string': query_string, 'posts': found_entries})
+        else:
+            messages.info(request, f'Your search matches nothing')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+
+
+
+
+
+
+
+
+

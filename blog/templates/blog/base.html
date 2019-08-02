@@ -23,7 +23,7 @@
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="width: 100%">
         <div class="container">
           <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">BDanielsen</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,27 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
-                <a class="nav-item nav-link" href="{% url 'pizza' %}">Pizzadough Calculator</a>
-                <a class="nav-item nav-link" href="{% url 'vinmonopolet' %}">Vinmonopolet Calculator</a>
 {#                <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>#}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Calculators
+                    </a>
+
+                    <div class="dropdown-menu bg-steel">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'pizza' %}">Pizzadough Calculator</a>
+                                <a class="nav-link" href="{% url 'vinmonopolet' %}">Vinmonopolet Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="search-bar" style="max-width: 500px;width: 100%">
+                    <form id='searchform' class="form-inline" action="{% url 'search' %}" method="get">
+                    <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search posts" aria-label="Search" style="width: 300px">
+{#                    <button class="btn" type="button" onclick="searchform.submit()">Search</button>#}
+                </form>
+                </div>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
