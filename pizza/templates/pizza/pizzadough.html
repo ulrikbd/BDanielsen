@@ -2,20 +2,24 @@
 {% load crispy_forms_tags %}
 {% crispy form example_form.helper %}
 {% block content %}
-    <div class="content-section">
-    {% crispy form %}
-    {% if flour %}
-    <div class='container'>
+<div class="content-section">
+  {% crispy form %}
+  {% if flour %}
+  <div class='container'>
     <div class=" row border-top mb-2 mt-4">
-        <legend class="border-rounded-sm pt-3">You need:
+      <legend class="border-rounded-sm pt-3">You need:
         <ul class="list-group list-group-horizontal pt-3">
-            <li class="list-group-item col-md-3 lead">{{ flour }} g flour</li>
-            <li class="list-group-item col-md-3 lead">{{ water }} g water</li>
-            <li class="list-group-item col-md-3 lead">{{ salt }} g salt</li>
-            <li class="list-group-item col-md-3 lead">{{ yeast }} g yeast</li>
+          <li class="list-group-item col-md-3 lead">{{ flour }} g flour</li>
+          <li class="list-group-item col-md-3 lead">{{ water }} g water</li>
+          <li class="list-group-item col-md-3 lead">{{ salt }} g salt</li>
+          <li class="list-group-item col-md-3 lead">{{ yeast }} g yeast</li>
         </ul>
     </div>
+    <div class="alert alert-info" role="alert">
+      NB! The yeast measurements accounts for a long proof. If you are going to
+      bake the pizza today, use five times the amount.
     </div>
-    {% endif %}
-    </div>
+  </div>
+  {% endif %}
+</div>
 {% endblock content %}
