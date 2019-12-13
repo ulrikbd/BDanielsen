@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 {% crispy form example_form.helper %}
 {% block content %}
-<img src="/media/pizza1.jpg" width="100%" alt="Pizza">
+<img src='{{ MEDIA_URL }}pizza1.jpg' width="100%" alt="Pizza">
 <div class="content-section">
   {% crispy form %}
   {% if flour %}
