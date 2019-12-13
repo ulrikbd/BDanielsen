@@ -47,6 +47,8 @@ a.article-title:hover {
 
 .article-content {
   white-space: pre-line;
+  max-height: 15rem;
+  overflow: hidden;
 }
 
 .article-img {
