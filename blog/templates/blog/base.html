@@ -16,10 +16,10 @@
 
   {% if title %}
   <title>BDanielsen | {{ title }}</title>
-  <link rel="icon" type="image/png" href="{{ MEDIA_URL }}beer.png" style="color: goldenrod">
+  <link rel="icon" type="image/png" href="{% static 'blog/beer.png' %}" style="color: goldenrod">
   {% else %}
   <title>BDanielsen</title>
-  <link rel="icon" type="image/png" href="{{ MEDIA_URL }}beer.png" style="color: goldenrod">
+  <link rel="icon" type="image/png" href="{% static 'blog/beer.png' %}" style="color: goldenrod">
   {% endif %}
 </head>
 
