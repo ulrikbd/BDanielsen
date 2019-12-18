@@ -35,6 +35,7 @@ def get_max_index(array, number):
 def sort(df, kind):
     return df[df.Varetype == kind]
 
+
 def cheapest(kind, number):
     df = pd.read_csv('{}/products.csv'.format(settings.MEDIA_ROOT),
                      delimiter=';', encoding='unicode_escape',
@@ -55,11 +56,11 @@ def cheapest(kind, number):
     a = 1
     for i in index:
         nummer = varenummer[i]
-        chp_dict.update( {str(a):[
+        chp_dict.update({str(a): [
             df['Varetype'][nummer], df['Varenavn'][nummer], df['Sukker'][nummer],
             df['Alkohol'][nummer], df['Literpris'][nummer], df['Vareurl'][nummer]
         ]}
-        ) #Varetype, Varenavn, Sukker, Alkohol, Literpris, Vareurl
+        )  # Varetype, Varenavn, Sukker, Alkohol, Literpris, Vareurl
         a += 1
     return chp_dict
 

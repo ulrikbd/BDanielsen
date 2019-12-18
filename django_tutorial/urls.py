@@ -23,8 +23,6 @@ from pizza import views as pizza_views
 from vinmonopolet import views as vinmonopolet_views
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
@@ -38,10 +36,12 @@ urlpatterns = [
          auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),
          name='password_reset_done'),
     path('password-reset-confirm/<uidb64>/<token>',
-         auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'),
+         auth_views.PasswordResetConfirmView.as_view(
+             template_name='users/password_reset_confirm.html'),
          name='password_reset_confirm'),
     path('password-reset/',
-         auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),
+         auth_views.PasswordResetCompleteView.as_view(
+             template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
     path('pizza/', pizza_views.pizza, name='pizza'),
     path('vinmonopolet/', vinmonopolet_views.vinmonopolet, name='vinmonopolet'),
@@ -50,4 +50,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + \
-                   static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+        static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
