@@ -54,7 +54,7 @@
           <div class="navbar-nav">
             {% if user.is_authenticated %}
             <form id='searchform' class="form-inline" action="{% url 'search' %}" method="get">
-              <input class="form-control pl-4 mr-sm-2" type="text" name="q" placeholder="Search for posts" aria-label="Search" style="width: 300px; outline: none; box-shadow: none; border: none">
+              <input class="form-control pl-4 mr-sm-2" type="text" name="q" placeholder="Search for posts" aria-label="Search" style="width: 200px">
               {#                    <button class="btn" type="button" onclick="searchform.submit()">Search</button>#}
               <!-- <i class="fas fa-search mx-2" style="color: #cbd5db; font-size: 20px"></i> -->
             </form>

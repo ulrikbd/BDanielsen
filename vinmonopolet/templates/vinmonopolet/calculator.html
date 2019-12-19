@@ -1,22 +1,32 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
 {% crispy form example_form.helper %}
+{% load static %}
 {% block content %}
-    <div class="content-section">
-    {% crispy form %}
-    {% if data %}
-        <legend class="border-top mt-4">Top {{ number }} {{ alcohol_type }}:</legend>
-        {% for key, value in data.items %}
-            <div class="container border-rounded-sm pt-3">
-                <div class="row lead">
-                    {{ key }}. {{ value.1 }}
+
+
+<style>
+    body {
+        background-image: {% static "vinmonopolet/vinmonopolet.jpeg" %}
+    }
+</style>
+    <div class="background-image" style="background-image: {% static 'vinmonopolet/vinmonopolet.jpeg' %}">
+        <div class="content-section">
+        {% crispy form %}
+        {% if data %}
+            <legend class="border-top mt-4">Top {{ number }} {{ alcohol_type }}:</legend>
+            {% for key, value in data.items %}
+                <div class="container border-rounded-sm pt-3">
+                    <div class="row lead">
+                        {{ key }}. {{ value.1 }}
+                    </div>
+                    <div class="row">
+                        Sugar: {{ value.2 }} g/L, Alcohol: {{ value.3 }}%, {{ value.4 }} kr/L
+                    </div>
+                    <a class="row border-bottom" href="{{ value.5 }}">{{ value.5 }}</a>
                 </div>
-                <div class="row">
-                    Sugar: {{ value.2 }} g/L, Alcohol: {{ value.3 }}%, {{ value.4 }} kr/L
-                </div>
-                <a class="row border-bottom" href="{{ value.5 }}">{{ value.5 }}</a>
-            </div>
-        {% endfor %}
-    {% endif %}
+            {% endfor %}
+        {% endif %}
+        </div>
     </div>
 {% endblock content %}

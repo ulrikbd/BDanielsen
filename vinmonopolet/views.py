@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .modules import cheapest
 from .forms import VinmonopoletForm
 
+
 def vinmonopolet(request):
     if request.method == 'POST':
         form = VinmonopoletForm(request.POST)
@@ -15,4 +16,3 @@ def vinmonopolet(request):
     else:
         form = VinmonopoletForm()
     return render(request, 'vinmonopolet/calculator.html', {'form': form, 'title': 'Vinmonopolet Calculator'})
-

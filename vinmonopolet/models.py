@@ -1,9 +1,9 @@
 from django.db import models
 
+
 class Vinmonopolet(models.Model):
 
     CHOICES = [
-        ('Rødvin', 'Rødvin'),
         ('Hvitvin', 'Hvitvin'),
         ('Rosévin', 'Rosévin'),
         ('Musserende vin', 'Musserende vin'),
@@ -17,12 +17,11 @@ class Vinmonopolet(models.Model):
         ('Rom', 'Rom'),
         ('Whisky', 'Whisky'),
         ('Brennevin, annet', 'Brennevin, annet'),
-        ('Likør', 'Likør'),
         ('Vermut', 'Vermut')
     ]
 
-    alcohol_type = models.CharField('Type of alcohol',max_length=30, choices=CHOICES, default='Rødvin'
-                                 )
+    alcohol_type = models.CharField('Type of alcohol', max_length=30, choices=CHOICES, default='Rødvin'
+                                    )
     number = models.IntegerField('How many results?', default=10)
 
     def get_alcohol_type(self):

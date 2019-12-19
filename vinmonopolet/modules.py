@@ -6,6 +6,24 @@ Created on Tue Mar 26 18:49:51 2019
 import pandas as pd
 import numpy as np
 from django.conf import settings
+import os
+import boto3
+from io import StringIO
+
+aws_id = os.environ['AWS_ACCESS_KEY_ID']
+aws_secret = os.environ['AWS_SECRET_ACCESS_KEY']
+
+client = boto3.client('s3', aws_access_key_id=aws_id,
+                      aws_secret_access_key=aws_secret)
+
+
+bucket_name = 'django-bdanielsen-files'
+
+object_key = 'products.csv'
+csv_obj = client.get_object(Bucket=bucket_name, Key=object_key)
+body = csv_obj['Body']
+csv_string = body.read().decode('utf-8', errors="ignore")
+
 # import time
 #
 #
@@ -37,7 +55,7 @@ def sort(df, kind):
 
 
 def cheapest(kind, number):
-    df = pd.read_csv('{}/products.csv'.format(settings.MEDIA_ROOT),
+    df = pd.read_csv(StringIO(csv_string),
                      delimiter=';', encoding='unicode_escape',
                      index_col='Varenummer', usecols=[1, 2, 3, 4, 5, 6, 26, 27, 35], decimal=',',
                      dtype={'Alkohol': np.float64, 'Pris': np.float64, 'Volum': np.float64, }, memory_map=True)
